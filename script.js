@@ -1,24 +1,24 @@
-body{
-text-align:center;
-font-family:Arial;
-background:#f2f2f2;
+function addTask(){
+
+let input =
+document.getElementById("taskInput");
+
+let task =
+input.value;
+
+if(task===""){
+return;
 }
 
-h1{
-color:#333;
-}
+let li =
+document.createElement("li");
 
-input{
-padding:10px;
-width:250px;
-}
+li.innerText=task;
 
-button{
-padding:10px;
-cursor:pointer;
-}
+document
+.getElementById("taskList")
+.appendChild(li);
 
-li{
-margin:10px;
-list-style:none;
+input.value="";
+
 }
